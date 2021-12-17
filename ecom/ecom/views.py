@@ -10,5 +10,5 @@ def about(request):
     return HttpResponse("About Us page.")
 
 
-def json(request):
-    return JsonResponse({"success": True})
+def json_resp(request):
+    return JsonResponse({"success": True, "message_info": "API Response in JSON."})

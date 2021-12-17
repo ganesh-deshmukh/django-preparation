@@ -19,6 +19,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
     path('index/', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('json_resp/', views.json_resp, name='json_resp'),

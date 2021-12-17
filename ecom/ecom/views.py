@@ -1,9 +1,10 @@
-# from django.shortcuts import render, HttpResponse, JsonResponse
+from django.shortcuts import render
 from django.http.response import HttpResponse, JsonResponse
 
 
 def index(request):
-    return HttpResponse("Index page.")
+    # return HttpResponse("Index page.")
+    return render(request, 'index.html')
 
 
 def about(request):

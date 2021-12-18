@@ -23,6 +23,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('login/', views.login, name='login'),
+    path('register/', views.register, name='register'),
     path('contact/', views.contact, name='contact'),
     path('services/', views.services, name='services'),
     path('json_resp/', views.json_resp, name='json_resp'),

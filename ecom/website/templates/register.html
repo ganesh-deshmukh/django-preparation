@@ -1,0 +1,48 @@
+{% extends 'base.html'  %}
+
+{%  block title %} Flipkart Login User  {%  endblock title %}
+
+
+{% block body %}
+
+<div class="container ">
+    <div class="ml-5 mt-5 p-3 center border border-warning">
+        <form class="form " method="POST" action="">
+            {% csrf_token %}
+            <h1>User Signup</h1>
+            <div class="w-60">
+                <table class="table">
+                    <tr>
+                        <td>Email: </td>
+                        <td><input type="email" name="username" placeholder="Email..." class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td><input type="password" name="password" placeholder="Password..." class="form-control"> </td>
+                    </tr>
+                    <tr>
+                        <td>Address: </td>
+                        <td><input type="text" name="text" placeholder="Address..." class="form-control"> </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            {% for message in messages %}
+                            <p class="bg-warning" id="message">{{message}}</p>
+                            {% endfor %}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="/login" class="btn btn-primary">Create an Account</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

@@ -9,9 +9,13 @@
     <div class="ml-5 mt-5 p-3 center border border-warning">
         <form class="form " method="POST" action="">
             {% csrf_token %}
-            <h1>User Signup</h1>
+            <h1>Signup</h1>
             <div class="w-60">
                 <table class="table">
+                    <tr>
+                        <td>Name: </td>
+                        <td><input type="text" name="name" maxlength="20" placeholder="Name..." class="form-control"> </td>
+                    </tr>
                     <tr>
                         <td>Email: </td>
                         <td><input type="email" name="username" placeholder="Email..." class="form-control"> </td>
@@ -21,8 +25,12 @@
                         <td><input type="password" name="password" placeholder="Password..." class="form-control"> </td>
                     </tr>
                     <tr>
+                        <td>Phone number: </td>
+                        <td><input type="text" name="phone_no" maxlength="10" placeholder="Phone number..." class="form-control"> </td>
+                    </tr>
+                    <tr>
                         <td>Address: </td>
-                        <td><input type="text" name="text" placeholder="Address..." class="form-control"> </td>
+                        <td><input type="text" name="address" placeholder="Address..." class="form-control"> </td>
                     </tr>
 
                     <tr>
@@ -35,7 +43,10 @@
 
                     <tr>
                         <td>
-                            <a href="/login" class="btn btn-primary">Create an Account</a>
+                            <input type="submit" class="btn btn-success" name="Submit" value="Register">
+                        </td>
+                        <td>
+                            <a href="/register" class="btn btn-primary">Create an Account</a>
                         </td>
                     </tr>
 
